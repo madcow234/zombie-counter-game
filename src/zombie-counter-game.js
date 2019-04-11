@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
-import Timer from "./components/Timer";
+import './zombie-counter-game.css';
+import Timer from "./components/timer";
 
-class App extends Component {
+class ZombieCounterGame extends Component {
   render() {
     return (
         <div>
@@ -24,4 +24,4 @@ class App extends Component {
     );
   }
 }
-export default App;
+export default ZombieCounterGame;
