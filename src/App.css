@@ -1,0 +1,44 @@
+.Scrolling-background {
+  position: absolute;
+  height: 360px;
+  width: 5760px;
+  background: url("./spritesheets/backgrounds/forest/forest01-1920-x-1080_003.png") repeat-x;
+  background-size: contain;
+  animation: Slide infinite 60s linear
+}
+
+.Distant-clouds {
+  position: absolute;
+  height: 360px;
+  width: 5760px;
+  background: url("./spritesheets/backgrounds/forest/forest01-1920-x-1080_002.png") repeat-x;
+  background-size: contain;
+  animation: Slide infinite 50s linear
+}
+
+.Foreground-clouds {
+  position: absolute;
+  height: 360px;
+  width: 5760px;
+  background: url("./spritesheets/backgrounds/forest/forest01-1920-x-1080_001.png") repeat-x;
+  background-size: contain;
+  animation: Slide infinite 40s linear
+}
+
+.Foreground-trees {
+  position: absolute;
+  height: 360px;
+  width: 5760px;
+  background: url("./spritesheets/backgrounds/forest/forest01-1920-x-1080_000.png") repeat-x;
+  background-size: contain;
+  animation: Slide infinite 30s linear
+}
+
+@keyframes Slide {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-1920px, 0);
+  }
+}
