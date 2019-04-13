@@ -2,8 +2,16 @@ import React, {Component} from 'react';
 import ButtonToolbar from "react-bootstrap/ButtonToolbar";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Button from "react-bootstrap/Button";
+import {connect} from "react-redux";
+import {addToMainCounter} from "../conf/redux/actions";
 
-export default class Timer extends Component {
+function mapDispatchToProps(dispatch) {
+    return {
+        addToMainCounter: num => dispatch(addToMainCounter(num))
+    }
+}
+
+class TimerInstance extends Component {
     state = {
         count: 0,
         intervalId: 0,
@@ -12,10 +20,12 @@ export default class Timer extends Component {
 
     tick = () => {
         this.setState({count: this.state.count + 1});
+        this.props.addToMainCounter(1);
     };
 
     add = () => {
-        this.setState({count: this.state.count + 9007199254740990});
+        this.setState({count: this.state.count + Number.MAX_SAFE_INTEGER});
+        this.props.addToMainCounter(Number.MAX_SAFE_INTEGER);
     };
 
     faster = () => {
@@ -48,6 +58,7 @@ export default class Timer extends Component {
         return (
             <div>
                 <h2>The count is {this.state.count}</h2>
+                <h2>The total count is {this.totalCount}</h2>
                 <ButtonToolbar>
                     <ButtonGroup>
                         <Button variant={'outline-primary'} type={'button'} onClick={this.add}>Add</Button>
@@ -61,3 +72,7 @@ export default class Timer extends Component {
         )
     }
 }
+
+const Timer = connect(null, mapDispatchToProps) (TimerInstance);
+
+export default Timer;

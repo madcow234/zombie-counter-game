@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import './zombie-counter-game.css';
 import Timer from "./components/timer";
+import GlobalCounter from './components/global-counter'
 
 class ZombieCounterGame extends Component {
   render() {
     return (
         <div>
-            <div style={{height: '100vh', width: '25vw', display: 'inline-block', float: 'left', border: 'solid', borderColor: 'blue'}}/>
+            <div style={{height: '100vh', width: '25vw', display: 'inline-block', float: 'left', border: 'solid', borderColor: 'blue'}}>
+                <GlobalCounter/>
+            </div>
             <div style={{height: '100vh', width: '50vw', border: 'solid', borderColor: 'black', overflowX: 'hidden', float: 'left'}}>
               <Timer/>
               <Timer/>
