@@ -2,7 +2,8 @@ import React from 'react';
 import {connect} from "react-redux";
 
 const mapStateToProps = state => {
-    return {totalCount: state.totalCount}
+    console.log(state);
+    return {totalCount: state.mainCounter.totalCount}
 };
 
 const Counter = ({totalCount}) => (

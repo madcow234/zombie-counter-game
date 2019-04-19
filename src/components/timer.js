@@ -3,7 +3,7 @@ import ButtonToolbar from "react-bootstrap/ButtonToolbar";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Button from "react-bootstrap/Button";
 import {connect} from "react-redux";
-import {addToMainCounter} from "../conf/redux/actions";
+import {addToMainCounter} from "../conf/redux/actions/actions";
 
 function mapDispatchToProps(dispatch) {
     return {
