@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './zombie-counter-game.css';
 import Timer from "./components/timer";
 import GlobalCounter from './components/global-counter'
+import MapListener from "./components/map/map-listener";
 
 class ZombieCounterGame extends Component {
   render() {
@@ -23,6 +24,7 @@ class ZombieCounterGame extends Component {
               </div>
             </div>
             <div style={{height: '100vh', width: '25vw', display: 'inline-block', float: 'left', border: 'solid', borderColor: 'green'}}/>
+            <MapListener/>
         </div>
     );
   }

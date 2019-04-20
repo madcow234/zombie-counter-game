@@ -19,8 +19,8 @@ class TimerInstance extends Component {
     };
 
     tick = () => {
-        this.setState({count: this.state.count + 2.496848468448963e115});
-        this.props.addToMainCounter(2.496848468448963e115);
+        this.setState({count: this.state.count + 1});
+        this.props.addToMainCounter(1);
     };
 
     add = () => {

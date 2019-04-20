@@ -1,0 +1,31 @@
+.modal-90w {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    max-height: none!important;
+    max-width: none!important;
+}
+
+.modal-content {
+    height: 100%;
+    width: 100%;
+}
+
+.modal-body {
+    content: url("../../spritesheets/backgrounds/map/generic-map.jpg");
+    overflow: hidden;
+    border-radius: 3px 3px 0 0;
+}
+
+.modal-footer {
+    height: 150px;
+    padding: 0;
+    justify-content: flex-start;
+}
+
+.inventory {
+    height: 100%;
+    overflow: hidden;
+}
