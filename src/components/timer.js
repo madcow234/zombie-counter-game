@@ -19,19 +19,19 @@ class TimerInstance extends Component {
     };
 
     tick = () => {
-        this.setState({count: this.state.count + 1});
-        this.props.addToMainCounter(1);
+        this.setState({count: this.state.count + 2.496848468448963e115});
+        this.props.addToMainCounter(2.496848468448963e115);
     };
 
     add = () => {
-        this.setState({count: this.state.count + Number.MAX_SAFE_INTEGER});
-        this.props.addToMainCounter(Number.MAX_SAFE_INTEGER);
+        this.setState({count: this.state.count + 3.786711152257754e117});
+        this.props.addToMainCounter(3.786711152257754e117);
     };
 
     faster = () => {
         if (this.state.intervalValue === 1000) {
             clearInterval(this.state.intervalId);
-            const intervalId = setInterval(this.tick, 100);
+            const intervalId = setInterval(this.tick, 0.000000000001);
             this.setState({intervalId: intervalId, intervalValue: 100});
         }
     };
@@ -58,7 +58,6 @@ class TimerInstance extends Component {
         return (
             <div>
                 <h2>The count is {this.state.count}</h2>
-                <h2>The total count is {this.totalCount}</h2>
                 <ButtonToolbar>
                     <ButtonGroup>
                         <Button variant={'outline-primary'} type={'button'} onClick={this.add}>Add</Button>
